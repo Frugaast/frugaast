@@ -1,0 +1,2 @@
+# frugaast
+Frugal Coding Assistant
