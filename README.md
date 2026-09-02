@@ -25,6 +25,10 @@ We took the raw editing power of CLI tools like `aider.chat`, stripped away the 
 
 Instead of chasing a 10x promise that results in spaghetti code, get a **solid 3x boost**—for a fraction of the cost, and with code that actually scales.
 
+
+<img src="https://frugaast.dev/images/home/screen.png" alt="Frugäast Screenshot" width="100%" />
+
+
 ---
 
 ## ⚡ Core Features
