@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="http://localhost:3006/images/logo_color.png" alt="Frugäast Logo" width="120" />
+  <img src="https://frugaast.dev/images/logo_color.png" alt="Frugäast Logo" width="120" />
   <h1>Frugäast</h1>
   <p><strong>The frugal, non-agentic coding assistant for senior developers.</strong></p>
   
