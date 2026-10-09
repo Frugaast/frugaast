@@ -1,100 +1,107 @@
 <div align="center">
-  <img src="https://frugaast.dev/images/logo_color.png" alt="Frugäast Logo" width="120" />
-  <h1>Frugäast</h1>
-  <p><strong>The frugal, non-agentic coding assistant for senior developers.</strong></p>
-  
-  [![Download Frugäast](https://img.shields.io/badge/Download-Frugäast-665cff?style=for-the-badge)](https://github.com/Frugaast/frugaast/releases)
-  [![Pricing](https://img.shields.io/badge/Pricing-Freemium-success?style=for-the-badge)](https://frugaast.dev/pricing)
-  [![Issues](https://img.shields.io/github/issues/Frugaast/frugaast?style=for-the-badge)](https://github.com/Frugaast/frugaast/issues)
+  <h1>Frugaast 🧠🛠️</h1>
+  <p><b>A frugal, 1-pass, agentless coding assistant that keeps <em>you</em> in control.</b></p>
+
+  <p>
+    <a href="#why-frugaast">Why Frugaast?</a> •
+    <a href="#core-features">Features</a> •
+    <a href="#how-it-works">How it Works</a> •
+    <a href="#getting-started">Getting Started</a>
+  </p>
 </div>
 
-<br/>
-
-> **Note:** Frugäast is a proprietary application. This repository serves as the official issue tracker, bug reporting hub, and download directory for our community.
-
-## 🛑 Stop paying AI to rediscover what you already know.
-
-You tried 10 different coding harnesses. You’ve seen the "10x developer" promises. But you also know the reality: autonomous agentic loops are great for exploring new ideas on a blank canvas, but they generate massive technical debt and "AI slope" on existing codebases.
-
-They quietly burn 100K+ tokens while you grab a coffee, wondering what tools to use, and eventually spit out hallucinated dependencies or duplicated code.
-
-**Frugäast is different.** 
-It is built for developers who actually *own* their codebase. You already know what you want to build. You don't need an AI to take over—you just need it to execute what you have in mind. 
-
-We took the raw editing power of CLI tools like `aider.chat`, stripped away the autonomous agentic loops, and wrapped it in a highly intuitive GUI. 
-
-Instead of chasing a 10x promise that results in spaghetti code, get a **solid 3x boost**—for a fraction of the cost, and with code that actually scales.
-
-
-<img src="https://frugaast.dev/images/home/screen.png" alt="Frugäast Screenshot" width="100%" />
-
-
 ---
 
-## ⚡ Core Features
+**Coding with AI agents feels fast—until you actually run the code.** 
 
-### 🎯 Exceptionally Clean Code (Context is King)
-Your LLM has a 200k context window. Cool. But its peak performance is actually around 10k tokens. Dumping your entire workspace into a prompt reduces reasoning quality.
-* **Granular Control:** Fuzzy search and select only the files relevant to your task.
-* **On-the-fly Repomap:** We generate a repository map dynamically so the LLM understands your architecture without reading every line of code.
-* **One pass to rule them all:** No agentic loops. Send the curated context, let the LLM generate the patch, and apply the edits. No surprises.
+If you're exhausted by complex "agentic" workflows, endless autonomous loops that write bloated code, and the terrifying realization that you no longer understand your own codebase, Frugaast is for you.
 
-### 💸 Frugal By Design
-* **Zero Agentic Waste:** Frugäast does not burn tokens talking to itself. Predictable usage means predictable costs.
-* **Bring Your Own Model (BYOM):** Connect your own API keys. Route simple boilerplate tasks to cheaper models, and reserve premium frontier models for complex architectural edits.
-* **Cost Tracking:** Review your spendings with built-in cost analysis dashboards for every edit.
+Frugaast is a desktop coding assistant (Tauri + Python) built on a simple philosophy: **The developer is the driver; the AI is just the engine.** 
 
-### 🖥️ Native, Snappy UI
-Built on **Tauri**, Frugäast is incredibly fast, lightweight, and stays out of your way. 
+No autonomous agents. No invisible context gathering. Just transparent, deterministic, 1-pass AI assistance that integrates deeply with your local and remote (SSH) Git workspaces.
 
----
+## 🛑 The Problem with Agentic AI
 
-## 🔄 Agentic vs. Frugäast Workflow
+Developers are increasingly frustrated with the current state of AI coding agents. We built Frugaast to solve the core pain points of the modern AI workflow:
 
-| Autonomous Agents (The Others) | Frugäast Workflow |
+| The Agentic Nightmare | The Frugaast Solution |
 | :--- | :--- |
-| ❌ Reads entire codebase (200k+ tokens) | ✅ Reads only selected files + dynamic repomap |
-| ❌ Loops 5-10 times to "figure things out" | ✅ One single, precise pass |
-| ❌ Unpredictable costs ($0.50+ per feature) | ✅ Pennies per feature, tracked locally |
-| ❌ Code duplication and "AI slope" | ✅ Clean, deterministic edits |
+| **Loss of Mental Model:** Agents write hundreds of lines you didn't ask for. Suddenly, no one understands how the system works. | **Developer-Driven:** You explicitly build the prompt context (files, symbols). You know exactly what the AI knows. |
+| **Poor Code Quality & Bloat:** Agents make up endpoints, ignore existing libraries, and write "plausible bullshit." | **1-Pass Deterministic Edits:** Frugaast uses explicit SEARCH/REPLACE edits. 1 prompt = 1 action. No spiraling autonomous loops. |
+| **Increased Workload:** Reviewing verbose, confident-but-wrong AI slop takes longer than just writing it yourself. | **Fast Reverts & Git Native:** One-click `Undo` for bad AI edits. All changes are staged and reviewed in a native Git diff viewer. |
+| **Complex Agent Setups:** Orchestrating multi-agent frameworks is a chore. | **Zero Friction:** A lightweight desktop app. Point it at a local repo or connect via SSH. Bring your own API key. |
 
 ---
 
-## 💰 Pricing: Frugal for your wallet, too.
+## ✨ Core Features
 
-We hate subscription fatigue as much as you do. Our pricing is simple and transparent:
+### 🎯 1-Pass, Transparent Execution
+- **Ask Mode:** Ask questions without risking unwanted code changes.
+- **Code Mode:** Apply targeted SEARCH/REPLACE edits. Changes are applied and committed to your local or remote repository instantly.
+- **Instant Undo:** AI hallucinated? Hit `Undo` right in the chat to revert the commit.
+- **Prompt Preview:** See the *exact* raw JSON prompt (System + User context) before spending a single token. No hidden magic.
 
-* **Free Version:** Includes **95% of all core features**. Perfect for daily driving, forever.
-* **Pro Version:** A one-time purchase. You get a **lifetime license** and **1 year of free updates**. 
+### 🧩 Laser-Focused Context Builder
+Stop letting the AI guess what matters. Build your context explicitly:
+- **Left Sidebar Explorer:** Add specific files or entire folders to the context with a click.
+- **Symbol-Driven Context (Extend):** Search and add specific classes, methods, or definitions from your Repo Map without loading thousands of lines of irrelevant code.
+- **Optional Overrides:** Pin static reference files (like `ARCHITECTURE.md`), toggle the Workspace Tree, or adjust the Repo Map token budget dynamically.
 
-[**Get your license key here →**](https://frugaast.dev)
+### 🌐 First-Class SSH Remote Workspaces
+Code on a remote server as seamlessly as on your local machine.
+- Connect to named SSH hosts effortlessly.
+- Frugaast auto-installs a lightweight, offline repository helper on the remote host (requires no remote Python, pip, or sudo).
+- The AI runs locally, keeping your API keys safe on your desktop, while file reads and Git commits happen directly on the remote server.
+
+### 💸 Built for Frugality (BYOK)
+- Bring your own API keys (OpenAI, Anthropic, Gemini, or local via LiteLLM).
+- **Cost Tracking:** Native dashboard tracking token usage, cost per session, and response times. Know exactly how much your AI assistance costs.
+- **Web Chatbot Mode:** Want to use Claude.ai or ChatGPT's web UI to save API costs? Frugaast lets you copy your highly-curated workspace context, ask for changes in the browser, paste the response back, and auto-apply the edits.
 
 ---
+
+## 🛠️ How it Works
+
+Frugaast uses a fast **React/Tauri desktop GUI** coupled with a self-contained **Python sidecar** via WebSockets.
+
+### The UI Layout
+```text
+┌ Title bar: SSH hosts · workspaces · settings (API Keys, Models, Theme)
+├ Workspace tabs (e.g., frontend-repo, backend-repo @ dev-server)
+├──────────────┬──────────────────────────────┬──────────────┐
+│ Left sidebar │ View tabs:                   │ Right        │
+│  Explorer /  │ 💬 Assistant                 │ sidebar:     │
+│  Search /    │ 🌐 Web Chatbot               │ 📜 Chat      │
+│  Extend      │ 💰 Costs                     │    History   │
+│ ──────────── │ 🔍 Code Explore              │ 🌿 Git       │
+│ Prompt       │ 📄 Files / Diffs             │    History   │
+│ Builder      │                              │              │
+└──────────────┴──────────────────────────────┴──────────────┘
+```
+
+### The Workflow
+1. **Open a Workspace:** Select a local Git repository or connect to a remote host via SSH.
+2. **Build Context:** Click `+` on files in the Explorer, or use **Extend** to inject specific symbols into the prompt.
+3. **Ask or Code:** Type your request. (Use `` ` `` for intelligent symbol autocomplete).
+4. **Review & Iterate:** If in Code mode, Frugaast edits your code and creates a Git commit. Review it in the Git History tab, or hit `Undo` if the AI missed the mark.
+
 
 ## 🚀 Getting Started
 
-1. **Download Frugäast** for your OS from the [release page](https://github.com/Frugaast/frugaast/releases).
-2. Install the application.
-3. Enter your LLM API keys (OpenAI, Anthropic, etc.).
-4. Open your existing codebase, select the files you want to edit, and let Frugäast handle the rest.
+*(Installation instructions coming soon - check the [Releases](https://github.com/Frugaast/frugaast/releases) page for macOS, Windows, and Linux binaries).*
+
+1. Download and install Frugaast.
+2. Open **Settings (Gear Icon) > API Keys** and add your provider keys (e.g., `ANTHROPIC_API_KEY`).
+3. Open a local Git repository or connect to an SSH host.
+4. Add files to your context and start coding.
 
 ---
 
-## 🐛 Feedback & Issue Tracking
+## ⚖️ License & Privacy
 
-Since Frugäast is closed-source, this GitHub repository is the central hub for our users to:
-* **Report Bugs:** Found a glitch? [Open an issue](https://github.com/Frugaast/frugaast/issues).
-* **Request Features:** Have an idea to make Frugäast even better? Let us know.
-* **Track Changelogs:** Stay updated with the latest releases and fixes.
+Frugaast is a desktop-first application. Your API keys, chat history, repository maps, and settings are stored locally on your machine (or securely via SSH tunnel for remote workspaces). We do not collect your code. 
 
-When submitting an issue, please include your OS, Frugäast version, and steps to reproduce. 
+Free usage allows up to 3 open workspaces simultaneously. See our [pricing / license](https://frugaast.dev/pricing) page for Pro features.
 
 ---
-
-<div align="center">
-  <br/>
-  <strong>Start frugal AI coding today.</strong><br/>
-  No agents. No hallucinations. Just clean, controlled edits.<br/><br/>
-  
-  <a href="https://github.com/Frugaast/frugaast/releases">Download Frugäast</a>
-</div>
+*Reclaim your mental model. Ditch the autonomous bloat. Code with Frugaast.*
