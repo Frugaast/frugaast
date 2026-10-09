@@ -16,7 +16,7 @@
 
 If you're exhausted by complex "agentic" workflows, endless autonomous loops that write bloated code, and the terrifying realization that you no longer understand your own codebase, Frugaast is for you.
 
-Frugaast is a desktop coding assistant (Tauri + Python) built on a simple philosophy: **The developer is the driver; the AI is just the engine.** 
+Frugaast is a desktop coding assistant built on a simple philosophy: **The developer is the driver; the AI is just the engine.** 
 
 No autonomous agents. No invisible context gathering. Just transparent, deterministic, 1-pass AI assistance that integrates deeply with your local and remote (SSH) Git workspaces.
 
